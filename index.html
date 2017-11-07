@@ -3,12 +3,40 @@
 <head>
 	<title>CNPS Calculator</title>
 	<link rel="stylesheet" type="text/css" href="cnps.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			
+			$(document).ready(function() {
+				$( ".cross" ).hide();
+
+				$( ".hamburger" ).click(function() {
+				$( ".menu" ).slideToggle( "normal", function() {
+				$( ".hamburger" ).hide();
+				$( ".cross" ).show();
+					});
+				});
+
+				$( ".cross" ).click(function() {
+				$( ".menu" ).slideToggle( "normal", function() {
+				$( ".cross" ).hide();
+				$( ".hamburger" ).show();
+					});
+				});
+
+			});
+		</script>
 </head>
 <body>
 	<header>
 		<nav>
-			<ul>
+			<ul class="hmenu">
+				<a href="index.html">CNPS Kalkylator</a>
+				<button class="hamburger">&#9776;</button>
+ 				<button class="cross">&#735;</button>
+ 			</ul>
+			<ul class="menu">
 				<li><a href="index.html">CNPS</a></li>
 				<li><a href="index.html">Kalkylator</a></li>
 				<li><a href="https://www.trustcruit.com/sv/cnps.html">Vad är CNPS?</a></li>
@@ -17,18 +45,101 @@
 	</header>
 
 	<div class="content">
-		<form>
-			<label>1</label><input type="number" name="1">
-			<label>2</label><input type="number" name="2">
-			<label>3</label><input type="number" name="3">
-			<label>4</label><input type="number" name="4">
-			<label>5</label><input type="number" name="5">
-			<label>6</label><input type="number" name="6">
-			<label>7</label><input type="number" name="7">
-			<label>8</label><input type="number" name="8">
-			<label>9</label><input type="number" name="9">
-			<label>10</label><input type="number" name="10">
-		</form>
+
+		<h2>Kalkylatorn</h2>
+
+		<table class="step1">
+			<tr>
+				<td>
+					<label>1</label>
+				</td>
+				<td>
+					<input type="number" name="1">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>2</label>
+				</td>
+				<td>
+					<input type="number" name="2">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>3</label>
+				</td>
+				<td>
+					<input type="number" name="3">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>4</label>
+				</td>
+				<td>
+					<input type="number" name="4">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>5</label>
+				</td>
+				<td>
+					<input type="number" name="5">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>6</label>
+				</td>
+				<td>
+					<input type="number" name="6">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>7</label>
+				</td>
+				<td>
+					<input type="number" name="7">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>8</label>
+				</td>
+				<td>
+					<input type="number" name="8">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>9</label>
+				</td>
+				<td>
+					<input type="number" name="9">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>10</label>
+				</td>
+				<td>
+					<input type="number" name="10">
+				</td>
+			</tr>
+			<!-- <label>2</label><input type="number" name="2"><br/>
+			<label>3</label><input type="number" name="3"><br/>
+			<label>4</label><input type="number" name="4"><br/>
+			<label>5</label><input type="number" name="5"><br/>
+			<label>6</label><input type="number" name="6"><br/>
+			<label>7</label><input type="number" name="7"><br/>
+			<label>8</label><input type="number" name="8"><br/>
+			<label>9</label><input type="number" name="9"><br/>
+			<label>10</label><input type="number" name="10"> -->
+		</table>
+
 	</div>
 
 	<footer>
