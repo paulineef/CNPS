@@ -3,8 +3,10 @@
 <head>
 	<title>CNPS Calculator</title>
 	<link rel="stylesheet" type="text/css" href="cnps.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="utf-8">
+	<script src="https://use.fontawesome.com/6f2a9fca0c.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			
@@ -32,25 +34,34 @@
 	<header>
 		<nav>
 			<ul class="hmenu">
-				<a href="index.html">CNPS Kalkylator</a>
+				<a href="index.html">CNPS Calculator</a>
 				<button class="hamburger">&#9776;</button>
  				<button class="cross">&#735;</button>
  			</ul>
 			<ul class="menu">
 				<li><a href="index.html">CNPS</a></li>
-				<li><a href="index.html">Kalkylator</a></li>
-				<li><a href="https://www.trustcruit.com/sv/cnps.html">Vad är CNPS?</a></li>
+				<li><a href="index.html">Calculator</a></li>
+				<li><a href="https://www.trustcruit.com/en/cnps.html">What is CNPS?</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<div class="content">
 
-		<h2>Kalkylatorn</h2>
+		<h2>Calculator</h2>
+		<p> Enter your data below</i> </p>
 
 		<table class="step1">
 			<tr>
+				<td class="red">
+					<label>0</label>
+				</td>
 				<td>
+					<input type="number" name="0">
+				</td>
+			</tr>
+			<tr>
+				<td class="red">
 					<label>1</label>
 				</td>
 				<td>
@@ -58,7 +69,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="red">
 					<label>2</label>
 				</td>
 				<td>
@@ -66,7 +77,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="red">
 					<label>3</label>
 				</td>
 				<td>
@@ -74,7 +85,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="red">
 					<label>4</label>
 				</td>
 				<td>
@@ -82,7 +93,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="red">
 					<label>5</label>
 				</td>
 				<td>
@@ -90,7 +101,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="red">
 					<label>6</label>
 				</td>
 				<td>
@@ -98,7 +109,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="yellow">
 					<label>7</label>
 				</td>
 				<td>
@@ -106,7 +117,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="yellow">
 					<label>8</label>
 				</td>
 				<td>
@@ -114,7 +125,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="green">
 					<label>9</label>
 				</td>
 				<td>
@@ -122,28 +133,62 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="green">
 					<label>10</label>
 				</td>
 				<td>
 					<input type="number" name="10">
 				</td>
 			</tr>
-			<!-- <label>2</label><input type="number" name="2"><br/>
-			<label>3</label><input type="number" name="3"><br/>
-			<label>4</label><input type="number" name="4"><br/>
-			<label>5</label><input type="number" name="5"><br/>
-			<label>6</label><input type="number" name="6"><br/>
-			<label>7</label><input type="number" name="7"><br/>
-			<label>8</label><input type="number" name="8"><br/>
-			<label>9</label><input type="number" name="9"><br/>
-			<label>10</label><input type="number" name="10"> -->
+		</table>
+		<table class="step 2">
+			<tr>
+				<td class="red q">
+					<label>D</label>
+				</td>
+				<td>
+					<input type="number" name="d" placeholder="00.0">
+				</td>
+				<td class="percent">
+					<label>%</label>
+				</td>
+			</tr>
+			<tr>
+				<td class="yellow q">
+					<label>N</label>
+				</td>
+				<td>
+					<input type="number" name="n" placeholder="00.0">
+				</td>
+				<td class="percent">
+					<label>%</label>
+				</td>
+			</tr>
+			<tr>
+				<td class="green q">
+					<label>P</label>
+				</td>
+				<td>
+					<input type="number" name="p" placeholder="00.0">
+				</td>
+				<td class="percent">
+					<label>%</label>
+				</td>
+			</tr>
+		</table>
+		<table class="result">
+			<tr>
+				<td class="cnps"><label>CNPS</label></td>
+				<td><input type="number" name="cnps"></td>
+			</tr>
 		</table>
 
 	</div>
 
 	<footer>
-		
+		<div class="content">
+		<img src="trustcruit-logo-white.svg" width="20%">
+		</div>
 	</footer>
 </body>
 </html>
