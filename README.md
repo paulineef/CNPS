@@ -1,1 +1,1 @@
-# other
+# CNPS Calculator
