@@ -29,6 +29,44 @@
 
 			});
 		</script>
+		<script type="text/javascript">
+
+			$(document).on("keypress", "input", function() {
+   				 var rSum = 0;
+   				 var ySum = 0;
+   				 var gSum = 0;
+   				 var rPercent = 0;
+   				 var yPercent = 0;
+   				 var gPercent = 0;
+
+    			$(".red").each(function(){
+					rSum += +$(this).val() || 0;
+				});
+
+    			$(".yellow").each(function(){
+					ySum += +$(this).val() || 0;
+				});
+
+				$(".green").each(function(){
+					gSum += +$(this).val() || 0;
+				});
+
+				var sum = rSum + ySum + gSum;
+	
+				rPercent = Math.round(100*(rSum / sum));
+				yPercent = Math.round(100*(ySum / sum));
+				gPercent = Math.round(100*(gSum / sum));
+
+				var result = (gPercent - rPercent); 
+
+				$("#sum").val(sum);
+    			$("#r").val(rPercent);
+    			$("#y").val(yPercent);
+    			$("#g").val(gPercent);
+    			$("#result").val(result);			
+    		});
+
+		</script>
 </head>
 <body>
 	<header>
@@ -39,7 +77,6 @@
  				<button class="cross">&#735;</button>
  			</ul>
 			<ul class="menu">
-				<li><a href="index.html">CNPS</a></li>
 				<li><a href="index.html">Calculator</a></li>
 				<li><a href="https://www.trustcruit.com/en/cnps.html">What is CNPS?</a></li>
 			</ul>
@@ -49,127 +86,135 @@
 	<div class="content">
 
 		<h2>Calculator</h2>
-		<p> Enter your data below</i> </p>
+		<p> Enter your data in the first column</i> </p>
 
 		<table class="step1">
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>0</label>
 				</td>
 				<td>
-					<input type="number" name="0">
+					<input class="red" class="input" type="number" name="0">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>1</label>
 				</td>
 				<td>
-					<input type="number" name="1">
+					<input class="red" type="number" name="1">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>2</label>
 				</td>
 				<td>
-					<input type="number" name="2">
+					<input class="red" type="number" name="2">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>3</label>
 				</td>
 				<td>
-					<input type="number" name="3">
+					<input class="red" type="number" name="3">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>4</label>
 				</td>
 				<td>
-					<input type="number" name="4">
+					<input class="red" type="number" name="4">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>5</label>
 				</td>
 				<td>
-					<input type="number" name="5">
+					<input class="red" type="number" name="5">
 				</td>
 			</tr>
 			<tr>
-				<td class="red">
+				<td class="r">
 					<label>6</label>
 				</td>
 				<td>
-					<input type="number" name="6">
+					<input class="red" type="number" name="6">
 				</td>
 			</tr>
 			<tr>
-				<td class="yellow">
+				<td class="y">
 					<label>7</label>
 				</td>
 				<td>
-					<input type="number" name="7">
+					<input class="yellow" type="number" name="7">
 				</td>
 			</tr>
 			<tr>
-				<td class="yellow">
+				<td class="y">
 					<label>8</label>
 				</td>
 				<td>
-					<input type="number" name="8">
+					<input class="yellow" type="number" name="8">
 				</td>
 			</tr>
 			<tr>
-				<td class="green">
+				<td class="g">
 					<label>9</label>
 				</td>
 				<td>
-					<input type="number" name="9">
+					<input class="green" type="number" name="9">
 				</td>
 			</tr>
 			<tr>
-				<td class="green">
+				<td class="g">
 					<label>10</label>
 				</td>
 				<td>
-					<input type="number" name="10">
+					<input class="green" type="number" name="10">
+				</td>
+			</tr>
+			<tr>
+				<td class="percent">
+					<label>SUM</label>
+				</td>
+				<td>
+					<input id="sum" type="number" name="tot" readonly>
 				</td>
 			</tr>
 		</table>
 		<table class="step 2">
 			<tr>
-				<td class="red q">
+				<td class="r q">
 					<label>D</label>
 				</td>
 				<td>
-					<input type="number" name="d" placeholder="00.0">
+					<input id="r" type="number" name="d">
 				</td>
 				<td class="percent">
 					<label>%</label>
 				</td>
 			</tr>
 			<tr>
-				<td class="yellow q">
+				<td class="y q">
 					<label>N</label>
 				</td>
 				<td>
-					<input type="number" name="n" placeholder="00.0">
+					<input id="y" type="number" name="n">
 				</td>
 				<td class="percent">
 					<label>%</label>
 				</td>
 			</tr>
 			<tr>
-				<td class="green q">
+				<td class="g q">
 					<label>P</label>
 				</td>
 				<td>
-					<input type="number" name="p" placeholder="00.0">
+					<input id="g" type="number" name="p">
 				</td>
 				<td class="percent">
 					<label>%</label>
@@ -179,7 +224,7 @@
 		<table class="result">
 			<tr>
 				<td class="cnps"><label>CNPS</label></td>
-				<td><input type="number" name="cnps"></td>
+				<td><input id="result" type="number" name="cnps" readonly></td>
 			</tr>
 		</table>
 
@@ -187,7 +232,7 @@
 
 	<footer>
 		<div class="content">
-		<img src="trustcruit-logo-white.svg" width="20%">
+		<img src="trustcruit-logo-white.svg">
 		</div>
 	</footer>
 </body>
