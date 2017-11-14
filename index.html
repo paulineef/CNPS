@@ -31,7 +31,7 @@
 		</script>
 		<script type="text/javascript">
 
-			$(document).on("keypress", "input", function() {
+			$(document).on("blur", "input", function() {
    				 var rSum = 0;
    				 var ySum = 0;
    				 var gSum = 0;
@@ -63,7 +63,11 @@
     			$("#r").val(rPercent);
     			$("#y").val(yPercent);
     			$("#g").val(gPercent);
-    			$("#result").val(result);			
+    			$("#result").val(result);
+
+    			$(".clear").click(function() {
+    				$("input").val("");
+				});			
     		});
 
 		</script>
@@ -227,6 +231,7 @@
 				<td><input id="result" type="number" name="cnps" readonly></td>
 			</tr>
 		</table>
+			<div class="clear">Clear</div>
 
 	</div>
 
