@@ -46,14 +46,17 @@ nav ul {
 }
 
 nav ul li {
-	padding: 20px 0px; 
 	list-style-type: none; 
 }
 
-nav li:hover {
+.menu li {
+	padding: 20px 0px; 
+}
+
+.menu li:hover {
 	background: #ddd; 
 }
-nav li:hover a {
+.menu li:hover a {
 	color: #fff;
 }
 
