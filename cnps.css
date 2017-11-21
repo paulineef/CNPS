@@ -87,7 +87,8 @@ nav button {
   	cursor:pointer;
 }
 
-nav .cross {
+nav #cross {
+	display: none; 
 	top: -5px;
 	font-size: 60pt;
 }
@@ -103,29 +104,33 @@ nav .cross {
 }
 
 /* --- CALCULATOR --- */
-
-table {
-	padding: 0; 
+.step1, .step2 {
 	margin-bottom: 30px; 
-	vertical-align: top; 
-	text-align: right; 
 }
 
-table th {
-	text-align: left; 
-}
-
-label {
+.label {
 	text-align: right; 
-	padding: 5px 6px; 
+	padding: 7px 5px; 
 	color: #fff;
+	width: 35px;
+	height: 20px; 
+	float: left; 
+}
+
+.s {
+	background: #ddd; 
+	text-align: center; 
 }
 
 input {
-	padding: 5px 10px; 
+	padding: 6px 10px;
 	font-size: 12pt; 
-	text-align: right; 
-	float: left;
+	text-align: right;
+	height: 20px;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 0px;
+	border-bottom: 1px solid transparent;
 }
 
 .q {
@@ -144,24 +149,23 @@ input {
 	background: #02AD8C; 
 }
 
+#g {
+	border-bottom: 1px solid #ddd;
+}
+
+#result {
+	border-bottom: 1px solid #ddd; 
+}
+
 .cnps {
+	width: 60px; 
+	text-align: center; 
 	background: #ddd; 
-	padding: 5px; 
-}
-
-.percent {
-	background: #ddd; 
-}
-
-.arrow {
-	margin: 30px 2px;
-	background: url("arrowDown.svg") no-repeat center; 
-	width: 20px;
-	height: 30px;
 }
 
 #sum {
 	color: #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 #clear {
@@ -177,6 +181,24 @@ input {
 
 #clear:hover {
 	background: #479dbf;
+}
+
+#text {
+	font-size: 10pt; 
+	width: 270px;
+	line-height: 14pt;
+	margin-top: 10px;  
+	margin-bottom: 30px; 
+	color: #ddd;
+}
+
+#download {
+	color: #a4cddd;
+	font-weight: 600; 
+}
+
+#download:hover {
+	color: #479dbf;
 }
 
 @media (min-width: 928px) {
@@ -219,8 +241,6 @@ input {
 
 	#clear {
 		float: left;
-		margin-top: 3px; 
-		margin-left: 10px; 
 	}
 
 	/* --- CONTENT ---*/
@@ -229,20 +249,13 @@ input {
 		width: 900px;
 		padding: 40px 0px; 
 	}
-
-	.red {
-		margin-right: 10px; 
+	
+	.step1, .step2 {
+		margin-right: 30px; 
 	}
-
-	.cnps {
-		margin-left: 10px; 
+	
+	.step1, .step2, .result {
+		float: left; 
 	}
-
-	.arrow {
-	float: left;
-	margin: 5px 30px;
-	background: url("arrow.svg") no-repeat center; 
-	width: 20px;
-	height: 30px;
-}
+	
 }

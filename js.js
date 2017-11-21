@@ -1,3 +1,5 @@
+
+
 function calc() {
 	var rSum = 0;
 	var ySum = 0;

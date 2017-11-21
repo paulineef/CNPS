@@ -6,40 +6,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta charset="utf-8">
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript">
-			
-			$(document).ready(function() {
-				$( ".cross" ).hide();
-
-				$( ".hamburger" ).click(function() {
-					$( ".menu" ).slideToggle( "normal", function() {
-						$( ".hamburger" ).hide();
-						$( ".cross" ).show();
-					});
-				});
-
-				$( ".cross" ).click(function() {
-					$( ".menu" ).slideToggle( "normal", function() {
-						$( ".cross" ).hide();
-						$( ".hamburger" ).show();
-					});
-				});
-
-			});
-		</script>
+		
 </head>
 <body>
 	<header>
 		<nav>
 			<ul class="hmenu">
 				<li><a href="index.html">CNPS Calculator</a></li>
-				<li><button class="hamburger">&#9776;</button></li>
- 				<li><button class="cross">&#735;</button></li>
+				<li><button id="hamburger">&#9776;</button></li>
+ 				<li><button id="cross">&#735;</button></li>
  			</ul>
 			<ul class="menu">
 				<li><a href="index.html">Calculator</a></li>
 				<li><a href="https://www.trustcruit.com/en/cnps.html">What is CNPS?</a></li>
+				<li><a href="https://medium.com/data-driven-hr/candidate-net-promoter-score-the-ultimate-guide-42b3c89f2c25"></a>CNPS: The Ultimate Guide</li>
 			</ul>
 		</nav>
 	</header>
@@ -49,147 +29,34 @@
 		<h2>Calculator</h2>
 		<p> Enter your data in the first column </p>
 
-		<table class="step1">
-			<tr>
-				<td class="r">
-					<label>0</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="0">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>1</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="1">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>2</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="2">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>3</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="3">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>4</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="4">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>5</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="5">
-				</td>
-			</tr>
-			<tr>
-				<td class="r">
-					<label>6</label>
-				</td>
-				<td>
-					<input class="red" type="number" name="6">
-				</td>
-			</tr>
-			<tr>
-				<td class="y">
-					<label>7</label>
-				</td>
-				<td>
-					<input class="yellow" type="number" name="7">
-				</td>
-			</tr>
-			<tr>
-				<td class="y">
-					<label>8</label>
-				</td>
-				<td>
-					<input class="yellow" type="number" name="8">
-				</td>
-			</tr>
-			<tr>
-				<td class="g">
-					<label>9</label>
-				</td>
-				<td>
-					<input class="green" type="number" name="9">
-				</td>
-			</tr>
-			<tr>
-				<td class="g">
-					<label>10</label>
-				</td>
-				<td>
-					<input class="green" type="number" name="10">
-				</td>
-			</tr>
-			<tr>
-				<td class="percent">
-					<label>SUM</label>
-				</td>
-				<td>
-					<input id="sum" type="number" name="tot" readonly>
-				</td>
-			</tr>
-		</table>
-		<table class="step 2">
-			<tr>
-				<td class="r q">
-					<label>D</label>
-				</td>
-				<td>
-					<input id="r" type="number" name="d" readonly>
-				</td>
-				<td class="percent">
-					<label>%</label>
-				</td>
-			</tr>
-			<tr>
-				<td class="y q">
-					<label>N</label>
-				</td>
-				<td>
-					<input id="y" type="number" name="n" readonly>
-				</td>
-				<td class="percent">
-					<label>%</label>
-				</td>
-			</tr>
-			<tr>
-				<td class="g q">
-					<label>P</label>
-				</td>
-				<td>
-					<input id="g" type="number" name="p" readonly>
-				</td>
-				<td class="percent">
-					<label>%</label>
-				</td>
-			</tr>
-		</table>
-		<table class="result">
-			<tr>
-				<td class="cnps"><label>CNPS</label></td>
-				<td><input id="result" type="number" name="cnps" readonly></td>
-			</tr>
-		</table>
-			<div id="clear">Clear</div>
-
+		<div class="step1">
+			<div class="r label">0</div><input class="red" type="number" name="0"><br/>
+			<div class="r label">1</div><input class="red" type="number" name="1"><br/>
+			<div class="r label">2</div><input class="red" type="number" name="2"><br/>
+			<div class="r label">3</div><input class="red" type="number" name="3"><br/>
+			<div class="r label">4</div><input class="red" type="number" name="4"><br/>
+			<div class="r label">5</div><input class="red" type="number" name="5"><br/>
+			<div class="r label">6</div><input class="red" type="number" name="6"><br/>
+			<div class="y label">7</div><input class="yellow" type="number" name="7"><br/>
+			<div class="y label">8</div><input class="yellow" type="number" name="8"><br/>
+			<div class="g label">9</div><input class="green" type="number" name="9"><br/>
+			<div class="g label">10</div><input class="green" type="number" name="10"><br/>
+			<div class="label s">SUM</div><input id="sum" type="number" name="tot" readonly>
+		</div>
+		<div class="step2">
+			<div class="r q label">D</div><input id="r" type="number" name="d" readonly><br/>
+			<div class="y q label">N</div><input id="y" type="number" name="n" readonly><br/>
+			<div class="g q label">P</div><input id="g" type="number" name="p" readonly>
+		</div>
+		<div class="result">
+			<div class="cnps label">CNPS</div><input id="result" type="number" name="cnps" readonly>
+			<div id="text"> 
+				CNPS is a mesurement of comparison. <a href="" target="_blank" id="download">Download your report here</a> to compare to the worlds largest database of CNPScores.
+			</div>
+			
+		</div>
+		<div id="clear">Clear</div>
+		
 	</div>
 
 	<footer>
@@ -198,5 +65,9 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript">
+			
+			
+		</script>
 </body>
 </html>
