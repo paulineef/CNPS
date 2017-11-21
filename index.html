@@ -28,61 +28,6 @@
 
 			});
 		</script>
-		<script type="text/javascript">
-
-			function calc() {
-				var rSum = 0;
-   				var ySum = 0;
-   				var gSum = 0;
-   				var rPercent = 0;
-   				var yPercent = 0;
-   				var gPercent = 0;
-
-    			document.querySelector(".red").each(function(){
-					rSum += +$(this).value() || 0;
-				});
-
-    			document.querySelector(".yellow").each(function(){
-					ySum += +$(this).value() || 0;
-				});
-
-				document.querySelector(".green").each(function(){
-					gSum += +$(this).value() || 0;
-				});
-
-				var sum = rSum + ySum + gSum;
-				if (sum === 0) {
-					// clear and return
-				}
-				rPercent = Math.round(100*(rSum / sum));
-				yPercent = Math.round(100*(ySum / sum));
-				gPercent = Math.round(100*(gSum / sum));
-
-				var result = (gPercent - rPercent); 
-
-				document.getElementById("#sum").val(sum);
-    			document.getElementById("#r").val(rPercent);
-    			document.getElementById("#y").val(yPercent);
-    			document.getElementById("#g").val(gPercent);
-    			document.getElementById("#result").val(result);
-
-    			document.querySelector(".clear").click(function() {
-    				document.querySelectorAll("input").value("");
-				});
-			};
-
-			function test(){
-				console.log("hej"); 
-			};
-
-			var select = document.querySelectorAll("input.red, input.green, input.yellow"), all;
-
-			for (var i = 0; i < select.length; i++) {
-				all = select[i];
-				all.addEventListener("change", test);
-			};
-			
-		</script>
 </head>
 <body>
 	<header>
@@ -252,5 +197,6 @@
 		<img src="trustcruit-logo-white.svg" alt="">
 		</div>
 	</footer>
+	<script type="text/javascript" src="js.js"></script>
 </body>
 </html>
