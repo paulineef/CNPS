@@ -49,18 +49,18 @@ nav ul li {
 	list-style-type: none; 
 }
 
-.menu li {
+#menu li {
 	padding: 20px 0px; 
 }
 
-.menu li:hover {
+#menu li:hover {
 	background: #ddd; 
 }
-.menu li:hover a {
+#menu li:hover a {
 	color: #fff;
 }
 
-.menu {
+#menu {
 	position: relative;
 	display: none; 
 	background: #f2f2f2; 
@@ -210,7 +210,7 @@ input {
 		max-width: 300px; 
 	}
 
-	.menu {
+	#menu {
 		display: block !important;
 		margin: 10px auto;
 		width: 900px;
@@ -220,22 +220,22 @@ input {
 		display: none; 
 	}
 
-	.menu ul {
+	#menu ul {
 		margin-top: 0; 
 		padding: 0;  
 	}
 
-	.menu li {
+	#menu li {
 		float: left; 
 		margin-right: 50px;
 		padding: 10px 0px; 
 	}
 
-	.menu li:hover {
+	#menu li:hover {
 		background: #fff; 
 	}
 
-	.menu li:hover a {
+	#menu li:hover a {
 		color: #02AD8C;
 	}
 
