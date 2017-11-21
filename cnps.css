@@ -164,7 +164,7 @@ input {
 	color: #ddd;
 }
 
-.clear {
+#clear {
 	padding: 7px 10px;
 	background: #a4cddd;
 	color: #fff;
@@ -175,7 +175,7 @@ input {
 	margin-bottom: 30px; 
 }
 
-.clear:hover {
+#clear:hover {
 	background: #479dbf;
 }
 
@@ -198,26 +198,26 @@ input {
 		display: none; 
 	}
 
-	nav ul {
+	.menu ul {
 		margin-top: 0; 
 		padding: 0;  
 	}
 
-	nav ul li {
+	.menu li {
 		float: left; 
 		margin-right: 50px;
 		padding: 10px 0px; 
 	}
 
-	nav li:hover {
+	.menu li:hover {
 		background: #fff; 
 	}
 
-	nav li:hover a {
+	.menu li:hover a {
 		color: #02AD8C;
 	}
 
-	.clear {
+	#clear {
 		float: left;
 		margin-top: 3px; 
 		margin-left: 10px; 

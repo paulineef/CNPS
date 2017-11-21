@@ -1,54 +1,60 @@
-		function calc() {
-				var rSum = 0;
-   				var ySum = 0;
-   				var gSum = 0;
-   				var rPercent = 0;
-   				var yPercent = 0;
-   				var gPercent = 0;
+function calc() {
+	var rSum = 0;
+	var ySum = 0;
+	var gSum = 0;
+	var rPercent = 0;
+	var yPercent = 0;
+	var gPercent = 0;
 
-   				function rSum(){
-					rSum += +$(this).value() || 0; //Denna
-				};
-   				
-				var red = document.querySelectorAll(".red");
+	var red = document.querySelectorAll(".red");
 
-				for (var i = 0; i < red.length; i++) {
-					var array = red[i];
-					array.rSum(); 
-				};
+	for (var i = 0; i < red.length; i++) {
+		rSum += +red[i].value || 0;  
+	}
 
+	var yellow = document.querySelectorAll(".yellow");
 
-    			document.getElementByClassName(".yellow").each(function(){
-					ySum += +$(this).value() || 0; //denna
-				});
+	for (var y = 0; y < yellow.length; y++) {
+		ySum += +yellow[y].value || 0;  
+	}
 
-				document.getElementByClassName(".green").each(function(){
-					gSum += +$(this).value() || 0; //denna
-				});
+	var green = document.querySelectorAll(".green");
 
-				var sum = rSum + ySum + gSum;
-				if (sum === 0) {
-					// clear and return
-				}
-				rPercent = Math.round(100*(rSum / sum));
-				yPercent = Math.round(100*(ySum / sum));
-				gPercent = Math.round(100*(gSum / sum));
+	for (var g = 0; g < green.length; g++) {
+		gSum += +green[g].value || 0;  
+	}
 
-				var result = (gPercent - rPercent); 
+	var sum = rSum + ySum + gSum;
 
-				document.getElementById("#sum").value(sum);
-    			document.getElementById("#r").value(rPercent);
-    			document.getElementById("#y").value(yPercent);
-    			document.getElementById("#g").value(gPercent);
-    			document.getElementById("#result").value(result);
+	if (sum === 0) {
+		clear();
+		return;
+	}
 
-    			document.getElementByClassName(".clear").click(function() {
-    				document.querySelectorAll("input").value("");
-				});
-			};
+	rPercent = Math.round(100*(rSum / sum));
+	yPercent = Math.round(100*(ySum / sum));
+	gPercent = Math.round(100*(gSum / sum));
 
-			var select = document.querySelectorAll("input.red, input.green, input.yellow");
+	var result = (gPercent - rPercent); 
 
-			for (var i = 0; i < select.length; i++) {
-				select[i].addEventListener("change", calc);
-			};
+	document.getElementById("sum").value = sum; 
+	document.getElementById("r").value = rPercent;
+	document.getElementById("y").value = yPercent;
+	document.getElementById("g").value = gPercent;
+	document.getElementById("result").value = result;
+}
+
+function clear() {
+	var input = document.querySelectorAll("input");
+	for (var i = 0; i < input.length; i++) {
+		input[i].value = "";
+	}
+}
+
+var select = document.querySelectorAll(".red, .green, .yellow");
+
+for (var i = 0; i < select.length; i++) {
+	select[i].addEventListener("change", calc);
+}
+
+document.getElementById("clear").addEventListener("click", clear);
