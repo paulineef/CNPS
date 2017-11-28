@@ -38,9 +38,9 @@ function calc() {
 	var result = (gPercent - rPercent); 
 
 	document.getElementById("sum").value = sum; 
-	document.getElementById("r").value = rPercent;
-	document.getElementById("y").value = yPercent;
-	document.getElementById("g").value = gPercent;
+	document.getElementById("r").value = rPercent + "%";
+	document.getElementById("y").value = yPercent + "%";
+	document.getElementById("g").value = gPercent + "%";
 	document.getElementById("result").value = result;
 }
 
