@@ -33,25 +33,28 @@ footer .content {
 	padding: 20px 30px;
 }
 
-#left {
+footer img {
+	width: 100px;
+}
+
+.left, .right {
 	float: left; 
 	text-align: left;
 	width: 49%; 
 }
 
-#right {
-	float: left;
+.right {
 	text-align: right;
-	width: 49%;
 }
 
-footer img {
-	width: 100px;
+.right #report {
+	display: none; 
 }
 
 /* --- MENU --- */
 
 nav ul { 
+	margin: 0;
 	padding: 0;  
 }
 
@@ -72,9 +75,11 @@ nav ul li {
 
 .toggled #menu {
 	transform: translateY(0);
+	height: auto;
 }
 
 #menu {
+	overflow: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -87,10 +92,11 @@ nav ul li {
 	font-size: 12pt; 
 	transform: translateY(-100%);
 	transition: transform .3s ease-in;
-	margin: 0 !important;
+	height: 0;
 }
 
 .hmenu {
+	margin-top: 20px;
 	padding: 0px 30px;
 }
 
@@ -253,8 +259,54 @@ form input {
 	color: #02AD8C;
 }
 
+.right #report {
+	width: 90%;
+}
+
 .h {
 	height: 550px;
+}
+
+@media (min-width: 640px) {
+
+	.hmenu { 
+		padding: 0px 60px;
+	}
+
+	nav button {
+		position: absolute;
+		right: 40px;
+	}
+
+	.content {
+		padding: 40px 60px;
+	}
+
+	.step1, .result{
+		float: left; 
+	}
+
+	.step1 {
+		margin-right: 30px; 
+	}
+
+	#clear {
+		float: left; 
+	}
+
+	.right #report {
+		margin: 40px 20px;
+		width: 70%;
+		display: block;
+	}
+
+	footer .content {
+		padding: 30px 60px;
+	}
+
+	footer img {
+ 		width: 100px;
+	}
 }
 
 @media (min-width: 928px) {
@@ -266,14 +318,17 @@ form input {
 		max-width: 300px; 
 	}
 
+	#menu,
+	#menu.toggled {
+		position: static;
+		transform: translateY(0);
+	}
+
 	#menu {
-		overflow: hidden; 
 		background: transparent;
 		display: block !important;
 		width: 900px;
-		position: static;
-		transform: translateY(0);
-		transition: none; 
+		height: auto;
 	}
 
 	.space {
@@ -302,9 +357,6 @@ form input {
 		color: #02AD8C;
 	}
 
-	#clear {
-		float: left;
-	}
 
 	/* --- CONTENT ---*/
 
@@ -319,6 +371,11 @@ form input {
 	
 	.step1, .step2, .result {
 		float: left; 
+	}
+
+	.right #report {
+		margin-top: 30px;
+		width: 60%;
 	}
 
 	footer {
@@ -341,45 +398,4 @@ form input {
 		margin-top: 50px;
 	}
 	
-}
-
-@media (min-width: 640px) and (max-width: 927px){
-
-
-	.hmenu {
-		padding: 0px 60px;
-	}
-
-	nav button {
-		position: absolute;
-		right: 40px;
-	}
-
-	.content {
-		padding: 40px 60px;
-	}
-
-	.step1, .result{
-		float: left; 
-	}
-
-	.step1 {
-		margin-right: 30px; 
-	}
-
-	#clear {
-		float: left; 
-	}
-
-	form {
-		margin-bottom: 150px; 
-	}
-
-	footer .content {
-		padding: 30px 60px;
-	}
-
-	footer img {
- 		width: 100px;
-	}
 }
