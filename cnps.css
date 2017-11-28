@@ -84,6 +84,10 @@ nav ul li {
 	list-style-type: none; 
 }
 
+nav ul li a {
+	font-weight: 500;
+}
+
 #menu li {
 	padding: 20px 0px; 
 }
