@@ -20,6 +20,10 @@ body {
 	padding: 0; 
 }
 
+body > * {
+	flex-shrink: 0;
+}
+
 header {
 	width: 100%;
 	background: #fff; 
@@ -33,7 +37,6 @@ header {
 }
 
 footer {
-	align-self: flex-end;
 	background: #5a5a5a; 
 	width: 100%;
 }
