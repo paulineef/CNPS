@@ -262,6 +262,11 @@ form {
 	margin-bottom: 150px;  
 }
 
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 form input {
 	width: 300px;
 	padding: 6px 10px;
