@@ -8,6 +8,10 @@ html, body {
 	height: 100%;
 }
 
+h1, h2, h3 {
+	font-weight: 500; 
+}
+
 a {
 	text-decoration: none; 
 	color: #000;
@@ -25,6 +29,7 @@ body > * {
 }
 
 header {
+	display: flex;
 	width: 100%;
 	background: #fff; 
 	border-bottom: solid 1px #f2f2f2; 
@@ -153,9 +158,9 @@ nav #cross {
 
 .label {
 	text-align: right; 
-	padding: 7px 5px; 
+	padding: 7px 7px; 
 	color: #fff;
-	width: 35px;
+	width: 30px;
 	height: 20px; 
 	float: left; 
 }
@@ -269,6 +274,7 @@ form input {
 	border: 1px solid #02AD8C;
 	border-radius: 5px; 
 	color: #fff;
+	cursor: pointer;
 }
 
 #send:hover {
@@ -313,13 +319,13 @@ form input {
 	}
 
 	.right #report {
-		margin: 40px 20px;
+		margin: 40px auto;
 		width: 70%;
 		display: block;
 	}
 
 	footer .content {
-		padding: 30px 60px;
+		padding: 20px 60px;
 	}
 
 	footer img {
@@ -331,9 +337,8 @@ form input {
 
 	/* --- MENU --- */
 
-	table {
-		float: left; 
-		max-width: 300px; 
+	header {
+		justify-content: center;
 	}
 
 	#menu,
@@ -350,7 +355,7 @@ form input {
 	}
 
 	.space {
-		margin: 10px 200px;
+		margin-top: 10px;
 	}
 
 	.hmenu {
