@@ -10,23 +10,25 @@
 </head>
 <body>
 	<header>
-		<nav>
+		<nav id="navi">
 			<ul class="hmenu">
 				<li><a href="index.html">CNPS Calculator</a></li>
 				<li><button id="hamburger">&#9776;</button></li>
  				<li><button id="cross">&#735;</button></li>
  			</ul>
-			<ul id="menu">
-				<li><a href="index.html">Calculator</a></li>
-				<li><a href="https://www.trustcruit.com/en/cnps.html">What is CNPS?</a></li>
-				<li><a href="https://medium.com/data-driven-hr/candidate-net-promoter-score-the-ultimate-guide-42b3c89f2c25"></a>CNPS: The Ultimate Guide</li>
-			</ul>
+ 			<div class="space">
+				<ul id="menu">
+					<li><a href="index.html">Calculator</a></li>
+					<li><a href="https://medium.com/data-driven-hr/what-is-candidate-net-promoter-score-cnps-d556764bdb8c" target="_blank">What is CNPS?</a></li>
+					<li><a href="https://medium.com/data-driven-hr/candidate-net-promoter-score-the-ultimate-guide-42b3c89f2c25" target="_blank">CNPS: The Ultimate Guide</a></li>
+				</ul>
+			<div>
 		</nav>
 	</header>
 
 	<div class="content">
 
-		<h2>Calculator</h2>
+		<h2>CNPS Calculator</h2>
 		<p> Enter your data in the first column </p>
 
 		<div class="step1">
@@ -51,7 +53,7 @@
 		<div class="result">
 			<div class="cnps label">CNPS</div><input id="result" type="number" name="cnps" readonly>
 			<div id="text"> 
-				CNPS is a mesurement of comparison. <a href="" target="_blank" id="download">Download your report here</a> to compare to the worlds largest database of CNPScores.
+				<a href="report.html" id="download">Download your report here</a> to compare your CNPS to the worlds largest CNPS database.
 			</div>
 			
 		</div>
@@ -61,13 +63,17 @@
 
 	<footer>
 		<div class="content">
-		<img src="trustcruit-logo-white.svg" alt="">
+			<div id="left">
+				<a href="https://www.medium.com/data-driven-hr" target="_blank">
+					<img id="blog" src="blog-logo.png" alt="">
+				</a>
+			</div>
+			<div id="right">
+				<a href="">
+					<img src="trustcruit-logo-white.svg" alt="">
+				</a></div>
 		</div>
 	</footer>
 	<script type="text/javascript" src="js.js"></script>
-	<script type="text/javascript">
-			
-			
-		</script>
 </body>
 </html>
