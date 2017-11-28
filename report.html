@@ -4,6 +4,7 @@
 	<title>CNPS Calculator</title>
 	<link rel="stylesheet" type="text/css" href="cnps.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<meta charset="utf-8">	
 </head>
 <body>
@@ -27,17 +28,20 @@
 	<div class="content hs">
 
 		<div class="left">
-			<form id="req">
+			<form id="req" method="POST">
 				<h2>Send me a report</h2>
 				<p></p>
 				<input type="text" name="firstname" placeholder="Firstname"><br>
 				<input type="text" name="lastname" placeholder="Lastname"><br>
 				<input type="text" name="company" placeholder="Company"><br>
 				<input type="email" name="email" placeholder="name@e-mail.com"><br>
+				<input type="text" name="CNPS" placeholder="Your CNPS"><br>
 				<input type="submit" name="send" value="Send" id="send">
 			</form>
+			<div id="message">
 			<h1>Thanks!</h1> 
 			<h2>We will send your report within 24 hours.</h2>
+			</div>
 		</div>
 		<div class="right">
 			<img id="report" src="report.svg" alt="">

@@ -287,6 +287,14 @@ form input {
 	color: #02AD8C;
 }
 
+#send:active {
+	border: 3px solid #02AD8C;
+}
+
+#message {
+	display: none;
+}
+
 .right #report {
 	width: 90%;
 }
