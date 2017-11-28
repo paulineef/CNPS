@@ -20,6 +20,13 @@ c.addEventListener('click', function(){
 	
 });
 
+function thanks() {
+	var form = document.getElementById('req');
+	form.style.display = "none";
+}
+
+var sent = document.getElementById('send').addEventListener("click", thanks);
+
 function calc() {
 	var rSum = 0;
 	var ySum = 0;

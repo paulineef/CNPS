@@ -1,7 +1,11 @@
 /* CNPS Calkylator Stylesheet */
 * {
-	font-family: "Roboto", sans-serif; 
+	font-family: "Trim", sans-serif; 
 
+}
+
+html, body {
+	height: 100%;
 }
 
 a {
@@ -10,6 +14,8 @@ a {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0; 
 }
@@ -22,10 +28,14 @@ header {
 	float: left; 
 }
 
+.content {
+	flex-grow: 1;
+}
+
 footer {
+	align-self: flex-end;
 	background: #5a5a5a; 
 	width: 100%;
-	height: 140px; 
 }
 
 footer .content {
@@ -49,6 +59,10 @@ footer img {
 
 .right #report {
 	display: none; 
+}
+
+.left h1 {
+	color: #02AD8C;
 }
 
 /* --- MENU --- */
@@ -231,6 +245,7 @@ nav #cross {
 /* --- Form --- */
 
 form {
+	display: block; 
 	margin-top: 50px;
 	margin-bottom: 150px;  
 }
@@ -376,10 +391,6 @@ form input {
 	.right #report {
 		margin-top: 30px;
 		width: 60%;
-	}
-
-	footer {
-		height: 200px; 
 	}
 
 	footer .content {
