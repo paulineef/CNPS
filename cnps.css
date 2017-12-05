@@ -451,3 +451,64 @@ form input {
 	}
 	
 }
+
+@media (min-width: 1500px) {
+
+	#menu {
+		width: 1100px;
+		font-size: 14pt;
+	}
+
+	.content {
+		width: 1100px;
+		padding: 100px 0px;
+	}
+
+	p {
+		font-size: 14pt; 
+	}
+
+	.step1 input, .step2 input, .result input {
+		padding: 9px 15px;
+		font-size: 13pt; 
+		text-align: right;
+		height: 30px;
+		width: 240px;
+		border-top: 2px solid #ddd;
+		border-right: 2px solid #ddd;
+		border-left: 0px;
+		border-bottom: 2px solid transparent;
+	}
+
+	.step1, .step2 {
+		margin-right: 60px;
+	}
+
+	.label {
+		padding: 16px;
+	}
+
+	h2 {
+		font-size: 22pt; 
+	}
+
+	footer {
+		height: 200px;
+	}
+
+	footer .content {
+		padding: 40px 0px;
+	}
+
+	footer img {
+		width: 40%;
+	}
+
+	/* --- Send report --- */
+
+	form input {
+		font-size: 14pt; 
+		padding: 9px 15px;
+	}
+
+}
